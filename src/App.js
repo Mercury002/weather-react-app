@@ -1,18 +1,13 @@
 import './App.css';
+import Mainblock from './component/main';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reacts
-        </a>
-      </header>
+      
+
+      <Mainblock></Mainblock>
     </div>
   );
 }
