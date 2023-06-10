@@ -4,16 +4,25 @@ const ForecastDaily = (props) => {
     const {dailyForecast} = props;
     console.log(dailyForecast);
 
-    <div>{dailyForecast.date}</div>
-    // <div>
-    //     <img src={weatherObj.forecast.forecastday[1].day.condition.icon} alt="" />
-    //     <b>{(new Date(weatherObj.forecast.forecastday[1].date)).toLocaleDateString()}</b>
+    function determineWeekday(dateString) {
+        const daysOfWeek = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+        const date = new Date(dateString);
+        const day = date.getDay();
+        return daysOfWeek[day];
+    }
 
-    //     <div>
-    //         <span>{weatherObj.forecast.forecastday[1].day.maxtemp_c}°</span> 
-    //         <span>{weatherObj.forecast.forecastday[1].day.mintemp_c}°</span>
-    //     </div>
-    // </div>
+    return(
+            <div>
+                <b>{determineWeekday(dailyForecast.date)}</b>
+                <img src={dailyForecast.day.condition.icon} alt="" />
+
+                <div>
+                    <span>{dailyForecast.day.mintemp_c}°</span> 
+                    <span>{dailyForecast.day.maxtemp_c}°</span>
+                </div>
+            </div>
+        )
+
 }
 
 

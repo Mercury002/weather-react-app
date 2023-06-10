@@ -1,0 +1,22 @@
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.weather__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.weather__day {
+    display: flex;
+}
+
+.weather__forecast {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -5,9 +5,9 @@ import Mainblock from './component/main';
 function App() {
   return (
     <div className="App">
-      
-
-      <Mainblock></Mainblock>
+      <div className='container'>
+        <Mainblock></Mainblock>
+      </div>
     </div>
   );
 }
