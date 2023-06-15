@@ -13,10 +13,32 @@
 
 .weather__day {
     display: flex;
+    margin-top: 15px;
+}
+
+.weather__day--pic {
+    width: 80px;
+    height: 80px;
+}
+
+.weather__day--pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.weather__day--info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+    font-family: "Roboto", sans-serif;
+    gap: 5px;
 }
 
 .weather__forecast {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 15px;
 }

@@ -12,13 +12,15 @@ const ForecastDaily = (props) => {
     }
 
     return(
-            <div>
-                <b>{determineWeekday(dailyForecast.date)}</b>
-                <img src={dailyForecast.day.condition.icon} alt="" />
+            <div className='forecast'>
+                <b className='forecast__day'>{determineWeekday(dailyForecast.date)}</b>
+                <span className='forecast__pic'>
+                    <img src={dailyForecast.day.condition.icon} alt="" />
+                </span>
 
-                <div>
-                    <span>{dailyForecast.day.mintemp_c}°</span> 
-                    <span>{dailyForecast.day.maxtemp_c}°</span>
+                <div className='forecast__weather'>
+                    <span className='forecast__weather--sohib forecast__weather--day'>{dailyForecast.day.maxtemp_c}°</span>
+                    <span className='forecast__weather--sohib forecast__weather--night'>{dailyForecast.day.mintemp_c}°</span> 
                 </div>
             </div>
         )

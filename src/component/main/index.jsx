@@ -34,15 +34,15 @@ const Mainblock = () => {
         <div className='weather'>
             <div className='weather__head'>
                 <h3 className='weather__head--title'>Результаты для города {countryName}</h3>
-                <strong className='weather__head--date'>{weatherObj.current && weatherObj.current.last_updated}</strong>
+                <strong className='weather__head--date'>{weatherObj.current && new Date(weatherObj.current.last_updated).toLocaleDateString()}</strong>
             </div>
 
             <div className='weather__day'>
-                <span>
+                <span className='weather__day--pic'>
                     <img src={weatherObj.current && weatherObj.current.condition.icon} alt="" />
-                    <b>{weatherObj.current && weatherObj.current.temp_c} °C</b>
                 </span>
-                <div>
+                <b>{weatherObj.current && weatherObj.current.temp_c} °C</b>
+                <div className='weather__day--info'>
                     <span>Вероятность осадков: {weatherObj.current && weatherObj.current.cloud}%</span>
                     <span>Влажность: {weatherObj.current && weatherObj.current.humidity}%</span>
                     <span>Ветер: {weatherObj.current && weatherObj.current.wind_kph}%</span>
